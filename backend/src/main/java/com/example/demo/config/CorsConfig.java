@@ -25,7 +25,7 @@ public class CorsConfig {
                         .filter(pattern -> !pattern.isEmpty())
                         .toList();
 
-                registry.addMapping("/api/**")
+                registry.addMapping("/**")
                         .allowedOriginPatterns(patterns.toArray(String[]::new))
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
