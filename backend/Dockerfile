@@ -9,7 +9,5 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-# ... (lasă liniile de sus cu FROM, COPY, RUN exact cum sunt) ...
 
-# Modifică doar linia de pornire de la final:
 ENTRYPOINT ["java", "-jar", "app.jar", "--spring.datasource.url=jdbc:postgresql://stelian:CZYqy2EpWVz6Rmr1LS42sN7FQZFAbfsv@dpg-d8ggqartqb8s73bj7kag-a/nextrep", "--spring.datasource.username=stelian", "--spring.datasource.password=CZYqy2EpWVz6Rmr1LS42sN7FQZFAbfsv", "--spring.datasource.driverClassName=org.postgresql.Driver"]
