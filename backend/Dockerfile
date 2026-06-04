@@ -7,6 +7,8 @@ RUN mvn clean package -DskipTests
 # Pasul 2: Rularea aplicației
 FROM eclipse-temurin:21-jre
 WORKDIR /app
+# Copiem fișierul jar generat
 COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar app.jar
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# Forțăm containerul Docker să transmită profilul 'prod' direct la pornirea Java
+ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-jar", "app.jar"]
