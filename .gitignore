@@ -1,0 +1,21 @@
+.idea/
+*.iml
+
+# Java / Maven
+backend/target/
+**/target/
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+**/node_modules/
+**/dist/
+
+# Env files and secrets
+.env
+.env.*
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+
