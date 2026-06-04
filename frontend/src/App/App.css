@@ -1,0 +1,158 @@
+/* Resetare și Stil de bază */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111111;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- NAVBAR MODIFICAT PENTRU LOGOUT IN DREAPTA --- */
+.navbar {
+  width: 100%;
+  padding: 25px 40px; /* Padding lateral pentru a nu lipi butonul de margine */
+  display: flex;
+  justify-content: center; /* Logo-ul rămâne centrat */
+  align-items: center;
+  position: relative; /* Container de referință pentru Logout */
+  box-sizing: border-box;
+}
+
+.logo {
+  color: #ccff00;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+/* POZITIONARE BUTON LOGOUT */
+.btn-logout {
+  position: absolute; /* Îl scoatem din fluxul normal de centrare */
+  right: 40px;        /* Îl împingem în dreapta */
+  top: 50%;           /* Îl centrăm vertical în raport cu navbar-ul */
+  transform: translateY(-50%); /* Ajustare fină pentru centrare verticală */
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 68, 68, 0.1);
+  color: #ff4444;
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(5px);
+}
+
+.btn-logout:hover {
+  background: #ff4444;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.4);
+  transform: translateY(-55%); /* Mărim puțin ridicarea la hover */
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  max-width: 800px;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 56px;
+  color: #ccff00;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.hero-description {
+  color: #cccccc;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.btn-get-started {
+  background-color: #ccff00;
+  color: black;
+  padding: 14px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.btn-get-started:hover {
+  transform: scale(1.05);
+  background-color: #b2e600;
+}
+
+/* Features Cards */
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 80px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #1e1e1e;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: left;
+  border: 1px solid transparent;
+  transition: border 0.3s;
+}
+
+.feature-card:hover {
+  border: 1px solid #ccff00; /* Efect cool de border la hover */
+}
+
+.feature-icon {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.feature-card p {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Responsivitate pentru mobil */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .btn-logout {
+    position: static; /* Pe mobil îl punem sub logo, nu în colț */
+    transform: none;
+    margin-top: 15px;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+}

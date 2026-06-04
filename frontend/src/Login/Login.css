@@ -1,0 +1,67 @@
+.login-container {
+    background-color: #121212; /* Fundalul închis la culoare */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-logo {
+    color: #ccff00; /* Verdele neon */
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #1e1e1e;
+    color: white;
+    box-sizing: border-box; /* Previne depășirea lățimii */
+}
+
+.sign-in-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ccff00;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.sign-in-btn:hover {
+    background-color: #b2e600;
+}
